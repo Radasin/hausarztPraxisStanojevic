@@ -1,41 +1,52 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Playfair+Display+SC:wght@700&display=swap');
+
 /* reset */
 html {
     background-color: var(--BG-LIGHT);
+    padding: 0;
     height: 0;
 }
+
 /* vars */
 :root {
     /* BG COLORS */
-    --BG-COLOR:   hsl(214, 48%, 39%);
-    --BG-IMAGE: linear-gradient(to right, #465f81, hsl(214, 33%, 40%), hsl(220, 35%, 35%));
-    --BG-NAV: linear-gradient(to bottom,hsl(220, 35%, 35%), hsl(214, 30%, 39%), hsl(214, 33%, 40%), hsl(220, 35%, 35%));
-    --BG-LIGHT: hsl(138, 73%, 96%); 
+    --BG-COLOR: hsl(214, 48%, 39%);
+    /* --BG-IMAGE: linear-gradient(to right, #465f81, hsl(214, 40%, 49%)); */
+    --BG-IMAGE: linear-gradient(to right, hsl(215, 30%, 50%), hsl(213, 42%, 54%));
+    --BG-IMAGE: linear-gradient(to left, var(--BG-LIGHT-FADE) 0.1%, var(--BG-COLOR));
+    --BG-NAV: linear-gradient(to bottom, hsl(221, 41%, 47%), hsl(218, 27%, 36%));
+    --BG-LIGHT: hsl(138, 63%, 95%); 
+    --BG-LIGHT-FADE:  hsl(216, 27%, 35%);
     /* TEXT COLOR */
     --TEXT-COLOR-WHITE: hsl(214, 20%, 49%);
     --TEXT-COLOR-DARK: aliceblue;
     --TEXT-BRAND-COLOR: hsl(47, 75%, 75%);
     --TEXT-TITLE-COLOR: hsla(214, 36%, 49%);
-    --TEXT-HIGHLIGHT-COLOR: hsl(137, 54%, 67%) ;
+    --TEXT-HIGHLIGHT-COLOR: hsl(137, 54%, 67%);
     --TEXT-HIGHLIGHT-FADE-COLOR: hsl(138, 73%, 52%);
-
+    --TEXT-SUBTITLE-COLOR: hsl(215, 23%, 84%);
+   
     /* FONT FAMILY */
     --FF: 'Merriweather Sans', sans-serif;
     --FF-HEADER: 'Playfair Display SC', serif;
     /* FONT SIZE */
-    --FS-BIG: clamp(2rem, 5vw, 7rem);
+    --FS-BIG: clamp(2rem, 3vw, 3.5rem);
     --FS-MEDIUM: clamp(1.3rem, 1.7vw, 2.3rem);
     --FS-SMALL: clamp(0.9rem, 1.4vw, 1.27rem);
     --FS-LOGO: clamp(0.83rem, 2.9vw, 1.6rem);
 
 
 }
+
 /* general styles */
 
 body {
     font-family: var(--FF) !important;
-    
+    width: 100%;
+    /*  height: 100vh; */
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -65,13 +76,24 @@ body {
 }
 
 /* Utils */
+.round__corners {
+    border-radius: 2%;
+}
+.bg__image {
+    background-image: var(--BG-IMAGE);
+}
+
+.bg_blue {
+    background-image: var(--BG-NAV);
+}
+
+.myShadow {
+    box-shadow: -10px 10px 10px rgb(80, 107, 112);
+}
 
 .center {
     text-align: center;
 }
-
-
-
 
 .nowrap {
     word-wrap: nowrap;
@@ -84,14 +106,19 @@ body {
 
 /* title  section*/
 #title {
-    background-image: var(--BG-NAV);
+    background-color: var(--BG-LIGHT);
 }
 
 #title .container-fluid {
     padding: 0;
     width: 74%;
 }
+#title .img-fluid {
+    border:1px solid var(--BG-LIGHT-FADE);
+    border-radius: 0.5%;
+}
 
+/* NAVBAR */
 .navbar-brand {
     color: var(--TEXT-BRAND-COLOR);
     cursor: default;
@@ -108,57 +135,58 @@ body {
     /* background-image: linear-gradient(to top, hsl(219, 28%, 39%),hsl(214, 30%, 39%), hsl(214, 60%, 65%)); */
     background-color: hsl(214, 48%, 39%);
     background-image: var(--BG-NAV);
-    box-shadow: 0px 0px 10px black !important;
-    margin-bottom: 10px;
+   
+    
 }
 
 .nav-link {
-    color:  hsl(47, 34%, 80%);
+    color: hsl(47, 34%, 80%);
     font-size: var(--FS-SMALL);
     font-family: var(--FF-HEADER);
 }
 
 .nav-link:hover {
-    color: #FADB69;;
+    color: #FADB69;
+    ;
 }
 
-.title__img {
-    box-shadow: 1px 1px 10px #333;
-    margin-bottom: 5px !important;
-}
 
 
 /* feauteres */
 #features {
     background-color: var(--BG-LIGHT);
-    padding: 5% 17.8%;
+    
+   
 }
+
 #features .col-lg-4 {
     padding: 3%;
-} 
+}
 
 .features__icon {
     font-size: var(--FS-BIG);
     color: var(--TEXT-HIGHLIGHT-COLOR);
     user-select: none;
-  
+
 }
 
 .features__icon:hover {
-    color:hsl(138, 73%, 52%);
+    color: hsl(138, 73%, 52%);
 }
 
 /* Infos */
 #informations {
-    background-image: var(--BG-NAV);
-    padding: 3% 0;
+    background-color: var(--BG-LIGHT);
+    
     font-family: var(--FF);
     font-size: var(--FS-SMALL);
     color: var(--TEXT-COLOR-DARK);
-   
-   
 }
 
+.informations__title {
+    font-size: var(--FS-BIG);
+    font-family: var(--FF-HEADER);
+}
 
 #informations .row {
     margin: 0%;
@@ -167,32 +195,50 @@ body {
 }
 
 #informations .carousel {
-    
+    margin: 0 auto;;
     padding: 5%;
-   
-}
-/* .contact__flex {
-    display: flex;
-    padding: 3% 17%;
- 
-} */
 
-.contact__sub {
+}
+
+
+
+.informations__sub {
     margin: 1%;
+    padding: 1%;
     font-family: var(--FF-HEADER);
     font-size: var(--FS-LOGO);
-    color: var(--TEXT-BRAND-COLOR);
+    color: var(--TEXT-SUBTITLE-COLOR);
+   
 }
 
 /* Personal */
 
 #personal {
     background-color: var(--BG-LIGHT);
-    padding: 5%;
+   
+
 }
+
+.personal__title {
+    background-color: var(--TEXT-COLOR-DARK);
+    color: var(--TEXT-TITLE-COLOR);
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-BIG);
+}
+
 #personal .card {
-    display: inline-block;
+    display: block;
     font-family: var(--FF);
+    font-size: var(--FS-SMALL);
+    text-align: left;
+    color: var(--TEXT-COLOR-WHITE);
+    border: none;
+}
+
+#personal .card-header {
+    font-family: var(--FF-HEADER);
+    font-size: var(--FS-MEDIUM);
+    color: var(--TEXT-TITLE-COLOR);
 }
 
 
@@ -201,31 +247,39 @@ body {
 /* FOOTER */
 
 #footer {
-    padding-top: 4%;
+    padding: 1%;
     background-color: var(--BG-LIGHT);
-    background-image: var(--BG-IMAGE);
     font-family: var(--FF);
     font-size: var(--FS-SMALL);
-    color: var(--TEXT-COLOR-DARK);
-   
+    color: var(--TEXT-COLOR-WHITE);
+    max-width: 98%;
+    margin: 0.5% auto;
 }
 
 
 #footer a {
     display: inline-block;
-    color: hsl(138, 73%, 52%);
+    color: var(--TEXT-TITLE-COLOR);
     font-family: var(--FF-HEADER);
     text-decoration: none;
     margin-bottom: 2%;
     padding: 0.5%;
+
 }
 
 
 
 
-@media screen and ( max-width: 760px) {
+@media screen and (max-width: 760px) {
     #title .container-fluid {
         padding: 0;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .carousel_text {
+        width: 60%;
+        margin: 2% auto;
     }
 }
