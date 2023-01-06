@@ -1,2 +1,1 @@
-# hausarztPraxisStanojevic
-web site test
+# hausarztPraxisStanojevic.github.io

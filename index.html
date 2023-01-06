@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg my-3 mx-2 p-2 myShadow">
+    <nav class="navbar navbar-expand-lg my-3 p-2 myShadow">
         <a class=" navbar-brand" href="#">Hausarztpraxis Stanojevic</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,27 +44,79 @@
     </nav>
 
     <section id="title">
-        <!-- Hero image -->
-        <div class="container-fluid ">
-            <img class="img-fluid myShadow m-2 " src="images/doctor-grey_1920.jpg" alt="caduceus" width="1920"
-                height="836">
+
+        <!-- Hero -->
+       <!--  <div class="drawing">
+            <canvas id="title__img" class="myShadow"></canvas>
+        </div> -->
+        <picture class="drawing myShadow">
+            <img src="images/doctor-grey_1920.jpg" alt="" >
+        </picture>
+        <!-- News -->
+        <div class="container">
+            <div id="carouselNews" class="carousel slide my-5  bg__image myShadow" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="carousel_text">
+                            <h2 class="big__header center"> Benachritung</h2>
+                            <p class="center">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+                                cumque enim iure sint
+                                itaque at,<br> expedita modi praesentium
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="carousel_text">
+                            <h2 class="big__header center"> Benachritung</h2>
+                            <p class="center">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+                                cumque enim iure sint
+                                itaque at,<br> expedita modi praesentium
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel_text">
+                            <h2 class="big__header center"> Benachritung</h2>
+                            <p class="center">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+                                cumque enim iure sint
+                                itaque at,<br> expedita modi praesentium
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNews" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselNews" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
+        <!-- Hero image -->
+
+        <!-- <img class="img-fluid myShadow" src="images/doctor-grey_1920.jpg" alt="caduceus" width="1800" > -->
+
     </section>
 
 
-    <section class="p-5" id="features">
+    <section class="container-section" id="features">
         <div class="row center container-fluid">
-            <div class="col-lg-4">
+            <div class="col-lg-4 p-2">
                 <p class="features__icon">✙</p>
                 <h2 class="medium__header center">Allgemeinmedizin</h2>
                 <p class="sub__header">Erste hilfe fur alle euchre gesundheits Probleme.</p>
             </div>
-            <div class="col-lg-4 ">
+            <div class="col-lg-4 p-2">
                 <p class="features__icon">❖</p>
                 <h2 class="medium__header center">Erfahrenes Team</h2>
                 <p class="sub__header">Unseres Team besizt 30 jahre Erfahrung.</p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 p-2">
                 <p class="features__icon">✺</p>
                 <h2 class="medium__header center">Corona Praxis</h2>
                 <p class="sub__header">Shutz von corona.</p>
@@ -75,170 +127,138 @@
 
 
 
-    <section id="informations" class="p-5">
+    <section id="informations" class="container-section">
 
-        <h1 class="informations__title my-5 p-3 center bg__image myShadow ">Informations</h1>
+        <h1 class="blue__title my-5 p-2 center bg__image myShadow ">Informations</h1>
 
-        <!-- News -->
-        <div id="carouselNews" class="carousel slide center bg__image myShadow round__corners w-50" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active ">
-                    <h2 class="big__header"> Benachritung</h2>
-                    <p class="carousel_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-                        cumque enim iure sint
-                        itaque at,<br> expedita modi praesentium </p>
-                </div>
-                <div class="carousel-item">
-                    <div class="container-fluid w-35">
-                        <h2 class="big__header"> Benachritung2</h2>
-                        <p class="carousel_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-                            cumque enim iure sint
-                            itaque at,<br> expedita modi praesentium </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <h2 class="big__header"> Benachritung3</h2>
-                    <p class="carousel_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-                        cumque enim iure sint
-                        itaque at,<br> expedita modi praesentium </p>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNews" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselNews" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
         <!-- time -->
-        <div class="container">
-            <div class="row">
-                <div class="col-6  m-5 myShadow  round__corners bg__image">
-                    <div class="row">
-                        <div class="col big__header">
-                            Öffnungszeiten
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col">
-                            Montag: <time datetime="08:00">08:00</time>-<time datetime="13:00">13:00</time>, <time
-                                datetime="14:00">14:00</time>-<time datetime="16:00">16:00</time>
-                        </div>
-                    </div>
 
-                    <div class="row ">
-                        <div class="col-">
-                            Dienstag: <time datetime="12:00">12:00</time>-<time datetime="18:00">18:00</time>
-                        </div>
-
-                    </div>
-
-                    <div class="row ">
-                        <div class="col">
-                            Mittwoch: <time datetime="08:00">08:00</time>-<time datetime="13:00">13:00</time>
-                        </div>
-                    </div>
-
-                    <div class="row ">
-                        <div class="col">
-                            Donnerstag: <time datetime="14:00">14:00</time>-<time datetime="19:00">16:00</time>
-                        </div>
-                    </div>
-
-                    <div class="row ">
-                        <div class="col">Freitag: <time datetime="08:00">08:00</time>-<time
-                                datetime="13:00">13:00</time>, <time datetime="14:00">14:00</time>-<time
-                                datetime="16:00">16:00</time>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            Samstag: Geschlosen
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            Sonntag: Geschlosen
-                        </div>
+        <div class="container-content">
+            <div class="container  m-5  p-3 myShadow bg__image">
+                <div class="row ">
+                    <div class="col big__header">
+                        Öffnungszeiten
                     </div>
                 </div>
-                <address class="col-4 m-5 myShadow round__corners bg__image">
-                    <div class="row">
-                        <div class="col-lg-12 big__header">Adresse:</div>
+                <div class="row ">
+                    <div class="col">
+                        Montag: <time datetime="08:00">08:00</time>-<time datetime="13:00">13:00</time>, <time
+                            datetime="14:00">14:00</time>-<time datetime="16:00">16:00</time>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">Neuweiler, Calw <br></div>
-                        <div class="col-lg-12">Calwer Str. 51<br></div>
-                        <div class="col-lg-12">Telefon Numer: 07055 9320196<br></div>
-                        <div class="col-lg-12">Fax.: 07055/9320196</div>
+                </div>
+
+                <div class="row  ">
+                    <div class="col-">
+                        Dienstag: <time datetime="12:00">12:00</time>-<time datetime="18:00">18:00</time>
                     </div>
-                </address>
+
+                </div>
+
+                <div class="row  ">
+                    <div class="col">
+                        Mittwoch: <time datetime="08:00">08:00</time>-<time datetime="13:00">13:00</time>
+                    </div>
+                </div>
+
+                <div class="row  ">
+                    <div class="col">
+                        Donnerstag: <time datetime="14:00">14:00</time>-<time datetime="19:00">16:00</time>
+                    </div>
+                </div>
+
+                <div class="row  ">
+                    <div class="col">Freitag: <time datetime="08:00">08:00</time>-<time datetime="13:00">13:00</time>,
+                        <time datetime="14:00">14:00</time>-<time datetime="16:00">16:00</time>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col">
+                        Samstag: Geschlosen
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col">
+                        Sonntag: Geschlosen
+                    </div>
+                </div>
             </div>
+            <address class="m-5  p-3 container myShadow  bg__image">
+                <div class="row">
+                    <div class="col-lg-12 big__header">Adresse:</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">Neuweiler, Calw <br></div>
+                    <div class="col-lg-12">Calwer Str. 51<br></div>
+                    <div class="col-lg-12">Telefon Numer: 07055 9320196<br></div>
+                    <div class="col-lg-12">Fax.: 07055/9320196</div>
+                </div>
+            </address>
         </div>
-        <h2 class="informations__sub center bg__image myShadow">Arzt ist im Notfall telefonisch immer erreichbar, 24 Stunden am Tag, 7 Tage
+
+        <h2 class="informations__sub center bg__image myShadow p-3 my-5">Arzt ist im Notfall telefonisch immer
+            erreichbar, 24
+            Stunden am Tag, 7 Tage
             in der Woche. </h2>
 
 
     </section>
 
-    <section id="personal" class="p-5">
-        <h1 class="personal__title my-5 p-3 center  myShadow">Personal</h1>
+    <section id="personal" class="">
+        <h1 class="white__title my-5 p-2 center  myShadow">Personal</h1>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card myShadow" style="max-width: 26ch;">
-                        <img src="images/doctor-g1925274a0_1280.png" class=" img-fluid card-img-top" alt="...">
-                        <h5 class="card-header">dr. Zoran Stanojevic</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Dr.med./Univ.</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of
-                                the card's content.</p>
-                        </div>
-                    </div>
+        <div class="container-content">
+
+
+            <div class="card myShadow " style="max-width: 24ch;">
+                <img src="images/doctor-g1925274a0_1280.png" class=" img-fluid card-img-top" alt="...">
+                <h5 class="card-header">dr. Zoran Stanojevic</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Dr.med./Univ.</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the
+                        bulk
+                        of
+                        the card's content.</p>
                 </div>
-
-                <div class="col-lg-4">
-                    <div class="card myShadow" style="max-width: 26ch;">
-                        <img src="images/doctor-g1925274a0_1280.png" class=" img-fluid card-img-top" alt="...">
-                        <h5 class="card-header">Andjela Stanojevic</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Arzthelferin</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of
-                                the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card myShadow" style="max-width: 26ch;">
-                        <img src="images/doctor-g1925274a0_1280.png" class="img-fluid card-img-top" alt="...">
-                        <h5 class="card-header">Jenny Baumgarttner</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Arzthelferin</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk
-                                of
-                                the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+
+
+            <div class="card myShadow " style="max-width: 24ch;">
+                <img src="images/doctor-g1925274a0_1280.png" class=" img-fluid card-img-top" alt="...">
+                <h5 class="card-header">Andjela Stanojevic</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Arzthelferin</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the
+                        bulk
+                        of
+                        the card's content.</p>
+                </div>
+            </div>
+
+
+
+            <div class="card myShadow " style="max-width: 24ch;">
+                <img src="images/doctor-g1925274a0_1280.png" class="img-fluid card-img-top" alt="...">
+                <h5 class="card-header">Jenny Baumgarttner</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Arzthelferin</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the
+                        bulk
+                        of
+                        the card's content.</p>
+                </div>
+            </div>
+
+
+
         </div>
     </section>
     </article>
 
-    <footer id="footer" class="center myShadow">
+    <footer id="footer" class="center p-3 my-3 myShadow">
         <div class="container-fluid">
             <a href="">Facebook</a>
             <a href="">DoctorLib</a>
@@ -254,7 +274,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
+    <script src="index.js"></script>
 </body>
 
 
